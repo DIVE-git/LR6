@@ -8,9 +8,11 @@ public class Model {
         if (fio == "" || Address == "") throw new RuntimeException("ERROR, НЕККОРЕКТНЫЕ ДАННЫЕ ПРИ ИНИЦИАЛИЗАЦИИ ЭКЗЕМПЛЯРА КЛАССА!");
         this.FIO = fio;
         this.address = Address;
-        ID++;
     }
-    private static int ID;
+
+    public Model() {
+    }
+
 
 
     //ИНИЦИАЛИЗАЦИЯ ПЕРЕМЕННЫХ
@@ -22,7 +24,7 @@ public class Model {
 
 
     //ИНИЦИАЛИЗАЦИЯ ГЕТТЕРОВ
-    public String getFIO() { return FIO; }
+    public String getFIO() { if(FIO == "" || FIO == null) {return "-ФИО ОТСУТСТВУЕТ-"; } return FIO; }
 
     public String getAddress() { if(address == "" || address == null) { return "-АДРЕС НЕ УСТАНОВЛЕН-"; } return address; }
 
@@ -30,9 +32,7 @@ public class Model {
 
     public int getPrice() { return price; }
 
-    public String getDateCreate() { if(dateCreate == null) { return "-ОТСУТСТВУЕТ-"; } return dateCreate.toString(); }
-
-    public static int getID() { return ID; }
+    public String getDateCreate() { if(dateCreate == null) { return "- ДАТА ОТСУТСТВУЕТ-"; } return dateCreate; }
 
 
 
@@ -54,6 +54,6 @@ public class Model {
     }
 
     public void setDateCreate(String input) {
-        this.dateCreate = input;
+        this.dateCreate = input.trim();
     }
 }

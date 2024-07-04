@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LR6_IDO:jar">
+    <output-path>$PROJECT_DIR$/</output-path>
+    <root id="archive" name="LR6_IDO.jar">
+      <element id="module-output" name="LR6_IDO" />
+      <element id="dir-copy" path="$PROJECT_DIR$" />
+    </root>
+  </artifact>
+</component>

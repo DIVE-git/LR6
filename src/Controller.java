@@ -24,4 +24,23 @@ public class Controller {
             }
         }
     }
+    public static void  WriteAllClientData(Model input) {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.print("ФИО: ");
+            input.setFIO(sc.nextLine());
+
+            System.out.print("Адрес: ");
+            input.setAddress(sc.nextLine());
+
+            System.out.print("Тарифный план: ");
+            input.setTariffPlan(sc.nextLine());
+
+            System.out.print("Абонентская плата: ");
+            input.setPrice(sc.nextInt());
+            sc.nextLine(); // Костыль
+            System.out.print("Дата подключения: ");
+            input.setDateCreate(sc.nextLine());
+    }
 }
+
